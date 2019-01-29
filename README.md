@@ -25,7 +25,7 @@ Status:
 ## Install
 
 ```bash
-$ npm install passport-google-oauth20
+$ npm install https://github.com/mix/passport-google-oauth2#v2.0.0
 ```
 
 ## Usage
@@ -77,7 +77,7 @@ application:
 app.get('/auth/google',
   passport.authenticate('google', { scope: ['profile'] }));
 
-app.get('/auth/google/callback', 
+app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
